@@ -1,0 +1,18 @@
+name: Schedule Build
+
+on:
+  schedule:
+    - cron: "* * * * *" # every 30min UTC
+
+jobs:
+  build:
+    name: Schedule Build
+    runs-on: ubuntu-latest
+    container: ershakiransari/jdk:8-mvn3
+
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Build with Maven
+        run: mvn clean package

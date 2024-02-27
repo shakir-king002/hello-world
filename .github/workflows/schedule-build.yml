@@ -1,6 +1,7 @@
 name: Schedule Build
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *" # every 30min UTC
 

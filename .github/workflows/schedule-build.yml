@@ -8,7 +8,7 @@ jobs:
   build:
     name: Schedule Build
     runs-on: ubuntu-latest
-    container: ershakiransari/jdk:8-mvn3
+    container: ershakiransari/jdk:11-mvn3
 
     steps:
       - name: Code checkout
